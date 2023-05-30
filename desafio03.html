@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+
+<body>
+    <h1>Desconto</h1>
+    <button id="botao">Desconto 10%</button>
+
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+    <div id="res4"></div>
+
+    <script>
+        let botao = document.getElementById('botao')
+        let div2 = document.getElementById('div2')
+        let div1 = document.getElementById('div1')
+        botao.addEventListener('click', desconto)
+
+
+        function desconto() {
+            let nomeP = prompt('Digite o nome do produto que você está comprando, Por favor!')
+            let preco = parseFloat(prompt('qual o preço do ' + nomeP + '?'))
+            let descVar = 10
+
+            let descAp = (preco * descVar)/100
+
+            let DescTotal = (preco - descAp)
+
+
+            res1.innerHTML = (`<h2> Calcualndo desconto de 10% para ${nomeP} </h2>`)
+            res2.innerHTML = (`<p>O preço original era R$${preco} </p>`)
+            res3.innerHTML = (`<p>você acaba de ganhar R$ ${descAp} de desconto </p>`)
+            res4.innerHTML = (`<p>No fim, você vai pagar ${DescTotal.toFixed(2)} no produto ${nomeP} </p>`)
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

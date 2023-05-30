@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10</title>
+    <style>
+         .y{ background-color: rgb(110, 156, 255);}
+    </style>
+</head>
+<body>
+    <h1>Vamos resolver um probleminhA de bhaskara 0_o</h1>
+
+    manda um numero aì
+
+    <button onclick="c()">Calcular</button>
+
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+   
+
+    <script>
+    function c(){
+        let a = Number(window.prompt("Qual é o valor de 'a' ?"))
+        let b = Number(window.prompt("Qual é o valor de 'b' ?"))
+        let c = Number(window.prompt("Qual é o valor de 'c' ?"))
+
+        
+        let res1 = window.document.getElementById("res1")
+        let res2 = window.document.getElementById("res2")
+        let res3 = window.document.getElementById("res3")
+      
+        let d = (b*b)-(4*a*c)
+
+
+        res1.innerHTML =`Equação: ${a}x² + ${b}x + ${c}</b> = 0`
+        res2.innerHTML = `Δ = ${b}² - 4 . ${a} . ${c}</b>`
+        res3.innerHTML += `O resultado <span class="y">Δ = ${d}</span>`
+
+
+    }
+
+      </script>
+    </body>
+</html>

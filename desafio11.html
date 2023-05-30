@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11</title>
+</head>
+<body>
+    <h1>Conversor de moedas (real) R$ → US$ (dolar)</h1>
+    <button onclick="conver()">Converter</button>
+    <div id="res1"></div>
+    
+
+    <script>
+      cotad= window.prompt(" Informe a cotação do dólar! ")
+        function conver(){
+            let real = Number(window.prompt("Qual é a quantia que você dejesa converter?"))
+            let valorc= real * cotad
+
+            let res1 = window.document.getElementById("res1")
+                res1.innerHTML = `<p>Com ${real}R$ você pode comprar ${valorc.toFixed(2)}US$</p>`
+        } 
+
+
+    </script>
+</body>
+</html>

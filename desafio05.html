@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+
+<body>
+    <h1>Troco</h1>
+
+    clique aqui:
+    <button onclick="troco()">Descubrir seu troco</button>
+
+
+    <script>
+        function troco() {
+            let nome = window.prompt("Que produto você comprou?")
+            let precoP = Number(window.prompt(`Quanto custa o que você está comprando?`))
+            let p = Number(window.prompt(`Qual foi o valor que você deu para pagar o ${nome}?`))
+            let troco = p  - precoP
+
+            if (precoP<= p) {
+                window.alert(`Você comprou um?a ${nome} que custou R$${precoP}. R$ ${p} em dinheiro e vai receber R$ ${troco} de troco \n Volte sempre!`)
+            }
+            else if (p < precoP) {
+                window.alert(`Dinheiro insuficiente :C `)
+            }
+            else {
+                window.alert("Dados inválidos :P")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

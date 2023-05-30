@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 13 </title>
+</head>
+<body>
+
+
+    <section>
+        <h1>Conversor de medidas</h1>
+
+        Clique no botão para converter o valor desejado:
+        
+        <section id="resp">
+            <button onclick="conv()">Converter</button>
+        </section>
+    </section>
+
+    <script>
+        function conv()
+        {
+            let med= Number(window.prompt("Digite a distância em metros (m): "))
+            let res = window.document.getElementById("resp")
+            res.innerHTML = `<br><h2> A distância de ${med} metros é equivalente a:</2>`
+            
+            res.innerHTML += `<br>${med/1000} Quilômetros (Km)`
+            res.innerHTML += `<br>${med/100} Hectômetros (Hm)`
+            res.innerHTML += `<br>${med/10} Decâmetros (dam)`
+            res.innerHTML += `<br>${med*10} Decímetros (dm)`
+            res.innerHTML += `<br>${med*100} Centímetros (cm)`
+            res.innerHTML += `<br>${med*1000} Milímetros (mm)`
+        }
+    </script>
+</body>
+</html>

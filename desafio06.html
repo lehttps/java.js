@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <style>
+        .ap {
+            color: green;
+            background-color: rgb(211, 255, 146);
+        }
+
+        .rc {
+            color: rgb(rgb(255, 221, 0));
+            background-color: rgb(252, 238, 168);
+        }
+
+        .rp {
+            color: rgb(187, 0, 0);
+            background-color: rgb(255, 110, 57);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Reprovado ou aprovado..?</h1>
+    <button onclick="media()">Inserir notas</button>
+     <section id="set"></section>
+
+    <script>
+        function media() {
+            let nome = window.prompt("Qual é o nome do aluno?")
+            let nt1 = Number(window.prompt(`Primeira nota de ${nome}:`))
+            let nt2 = Number(window.prompt(`Segunda nota de ${nome}:`))
+            let med = (nt1 + nt2) / 2
+            let set = window.document.getElementById("set")
+          
+
+            if (med >= 6) {
+                set.innerHTML += `<br><h2>Notas: ${nt1} e ${nt2}, <b> Média: ${med}</b></h2><br>`
+                set.innerHTML += `<br><h2>A média está acima de 6.0, aluno <span class="ap"><b>aprovado :D</b></span></h2><br>`
+            }
+            else if (med < 6 && med >=3) {
+                set.innerHTML += `<br><h2>Notas: ${nt1} e ${nt2}, <b>Média: ${med}</b> </h2><br>`
+                set.innerHTML += `<br><h2> A média está entre 6.0 e 3.0 o aluno está de <span class="rc"><b>recuperação</b></span></h2><br>`
+             
+            }
+            else if(med < 3) {
+                set.innerHTML = `<br><h2> Então ${nome}..</h2>`
+                set.innerHTML += `<br><h2>Notas: ${nt1} e ${nt2}, <b>Média:${med}</b></h2><br>`
+                set.innerHTML += `<br> <h2>Média abaixo de 3.0 significa que o aluno está <span class="rp"><b>eprovado</b> :C</span></h2><br>`
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
